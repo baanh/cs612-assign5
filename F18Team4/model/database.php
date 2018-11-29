@@ -1,8 +1,8 @@
 <?php
 // Set up the database connection
-$dsn = 'mysql:host=localhost;dbname=my_guitar_shop';
-$username = 'mgs_user';
-$password = 'pa55word';
+$dsn = 'mysql:host=webdev.bentley.edu;dbname=f18team4';
+$username = 'F18Team4';
+$password = 'F18Team4';
 $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
 try {
