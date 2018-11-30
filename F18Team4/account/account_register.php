@@ -3,6 +3,33 @@
 <?php 
 if (!isset($password_message)) { $password_message = ''; } 
 ?>
+<script>
+    function setElementValue(name1, name2) {
+        if (name2 != '') {
+            document.getElementsByName(name1)[0].value = document.getElementsByName(name2)[0].value;
+        } else {
+            document.getElementsByName(name1)[0].value = '';
+        }
+    }
+    
+    function setBillingAddress(checkbox) {
+        if (checkbox.checked) {
+            setElementValue('bill_line1', 'ship_line1');
+            setElementValue('bill_line2', 'ship_line2');
+            setElementValue('bill_city', 'ship_city');
+            setElementValue('bill_state', 'ship_state');
+            setElementValue('bill_zip', 'ship_zip');
+            setElementValue('bill_phone', 'ship_phone');
+        } else {
+            setElementValue('bill_line1', '');
+            setElementValue('bill_line2', '');
+            setElementValue('bill_city', '');
+            setElementValue('bill_state', '');
+            setElementValue('bill_zip', '');
+            setElementValue('bill_phone', '');
+        }
+    }
+</script>
 <main>
     <h1>Register</h1>
     <form action="." method="post" id="register_form">
@@ -77,7 +104,7 @@ if (!isset($password_message)) { $password_message = ''; }
         <label>&nbsp;</label>
         <input type="checkbox" name="use_shipping"
                <?php if ($use_shipping) : ?>checked<?php endif; ?>
-               size="30"> Use shipping address
+               size="30" onchange="setBillingAddress(this)"> Use shipping address
         <br>
 
         <label>Address:</label>
