@@ -3,7 +3,7 @@
 
     <!-- the head section -->
     <head>
-        <title>My Awesome Guitar Shop</title>
+        <title>My Awesome Guitar Shop ---- Test</title>
         <link rel="stylesheet" type="text/css" 
               href="<?php echo $app_path ?>main.css">
         <link rel="stylesheet" type="text/css" 
