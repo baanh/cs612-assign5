@@ -1,7 +1,7 @@
 <?php include 'view/header.php'; ?>
 <?php include 'view/sidebar.php'; ?>
 <main class="nofloat">
-    <h1>Featured products</h1>
+    <h3>Featured products</h3>
     <p>We have a great selection of musical instruments including
         guitars, basses, and drums. And we're constantly adding more to give
         you the best selection possible!
@@ -25,15 +25,18 @@
             ?>
 
             <div class="card">
-                <img class="card-img-top" width="286" height="180" 
+                <img class="card-img-top" style="height: 200px; margin: auto" 
                      src="images/<?php echo htmlspecialchars($product['productCode']); ?>_s.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">
+                        <p>$<?php echo number_format($unit_price, 2); ?></p>
                         <a href="catalog?product_id=<?php echo $product['productID']; ?>">
                             <?php echo htmlspecialchars($product['productName']); ?>
                         </a>
                     </h5>
-                    <p class="card-text"><?php echo $first_paragraph; ?></p>
+                    <!-- <p class="card-text"><?php echo $first_paragraph; ?></p> -->
+                </div>
+                <div class="card-footer">
                     <a href="#" class="btn btn-primary">See Detail</a>
                 </div>
             </div>
