@@ -1,23 +1,12 @@
 <?php include 'view/header.php'; ?>
-<<<<<<< HEAD
-<?php include 'view/sidebar_admin.php'; ?> 
-<?php include 'view/sidebar.php'; ?> 
 
-<main class="nofloat">
-    <body style="background-color:powderblue;">
-    <h3>Featured products</h3>
-    <p>We have a great selection of musical instruments including
-        guitars, basses, and drums. And we're constantly adding more to give
-        you the best selection possible!
-    </p>
-=======
 <?php include 'view/navigationbar.php'; ?>
-<?php include 'view/sidebar.php'; ?>
+<?php include 'view/sidebar_admin.php'; ?> 
 <main class="nofloat">
     <h4>Featured products</h4>
     <p>A great selection of musical instruments including
         guitars, basses, and drums</p>
->>>>>>> 34012079771a67b7b4fea35b6eaa76414e92983d
+
     <div class="card-deck">
         <?php
         foreach ($products as $product) :
@@ -54,6 +43,6 @@
             </div>
         <?php endforeach; ?>
     </div>
-    </body>
+
 </main>
 <?php include 'view/footer.php'; ?>

@@ -1,5 +1,5 @@
 <?php include 'view/header.php'; ?>
-<?php include 'view/sidebar_admin.php'; ?>
+
 <main>
     <h1>Administrator Accounts</h1>
     <?php if (isset($_SESSION['admin'])) : ?>

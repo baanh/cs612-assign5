@@ -1,5 +1,5 @@
 <?php include 'view/header.php'; ?>
-<?php include 'view/sidebar_admin.php'; ?>
+
 <main class="nofloat">
     <h1>Delete Account</h1>
     <p>Are you sure you want to delete the account for

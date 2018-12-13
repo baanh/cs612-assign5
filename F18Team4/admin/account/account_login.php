@@ -1,5 +1,6 @@
 <?php include 'view/header.php'; ?>
-<?php include 'view/sidebar_admin.php'; ?>
+<?php include 'view/navigationbar.php'; ?>
+
 <main>
     <h1>Admin Login</h1>
     <form action="." method="post" id="login_form">

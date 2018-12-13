@@ -1,5 +1,5 @@
 <?php include 'view/header.php'; ?>
-<?php include 'view/sidebar_admin.php'; ?>
+
 <main>
     <h1>Edit Account</h1>
     <div id="edit_account_form">

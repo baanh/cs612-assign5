@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <div align="center">
     <ul class="nav">
         <li class="nav-item">
@@ -22,12 +22,12 @@
             </li>
         <?php endforeach; ?>
         
-=======
+
 <aside>
     <h5>Links</h5>
     <ul>
         <li>
->>>>>>> 34012079771a67b7b4fea35b6eaa76414e92983d
+
         <?php
         // Check if user is logged in and
         // display appropriate account links
@@ -73,9 +73,9 @@
             <a href="<?php echo $app_path; ?>admin">Admin</a>
         </li>        
     </ul> -->
-<<<<<<< HEAD
+
 
 </div>
-=======
+
 </aside>
->>>>>>> 34012079771a67b7b4fea35b6eaa76414e92983d
+
