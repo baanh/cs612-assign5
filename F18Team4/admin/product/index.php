@@ -68,7 +68,7 @@ switch ($action) {
                 FILTER_VALIDATE_FLOAT);
         $discount_percent = filter_input(INPUT_POST, 'discount_percent', 
                 FILTER_VALIDATE_FLOAT);
-
+        
         // Validate inputs
         if (empty($code) || empty($name) || empty($description) ||
             $price === false || $discount_percent === false) {
@@ -93,8 +93,7 @@ switch ($action) {
         $description = filter_input(INPUT_POST, 'description');
         $price = filter_input(INPUT_POST, 'price', 
                 FILTER_VALIDATE_FLOAT);
-        $discount_percent = filter_input(INPUT_POST, 'discount_percent', 
-                FILTER_VALIDATE_FLOAT);
+        $discount_percent = filter_input(INPUT_POST, 'discount_percent');
 
         // Validate inputs
         if (empty($code) || empty($name) || empty($description) ||
@@ -122,7 +121,7 @@ switch ($action) {
         if (isset($_FILES['file1'])) {
             $source = $_FILES['file1']['tmp_name'];
             $target = $image_dir . DIRECTORY_SEPARATOR . $image_filename;
-
+            
             // save uploaded file with correct filename
             move_uploaded_file($source, $target);
 

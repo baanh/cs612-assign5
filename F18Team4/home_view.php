@@ -1,11 +1,10 @@
 <?php include 'view/header.php'; ?>
+<?php include 'view/navigationbar.php'; ?>
 <?php include 'view/sidebar.php'; ?>
 <main class="nofloat">
-    <h3>Featured products</h3>
-    <p>We have a great selection of musical instruments including
-        guitars, basses, and drums. And we're constantly adding more to give
-        you the best selection possible!
-    </p>
+    <h4>Featured products</h4>
+    <p>A great selection of musical instruments including
+        guitars, basses, and drums</p>
     <div class="card-deck">
         <?php
         foreach ($products as $product) :
@@ -36,8 +35,8 @@
                     </h5>
                     <!-- <p class="card-text"><?php echo $first_paragraph; ?></p> -->
                 </div>
-                <div class="card-footer">
-                    <a href="#" class="btn btn-primary">See Detail</a>
+                <div class="card-footer text-center">
+                    <a href="#">Add to cart</a>
                 </div>
             </div>
         <?php endforeach; ?>

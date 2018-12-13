@@ -12,5 +12,5 @@
 
     <body>
         <header>
-            <center><h1>My Guitar Shop</h1></center>
+            <center><h2>My Guitar Shop</h2></center>
         </header>
