@@ -1,5 +1,5 @@
 <?php include '../view/header.php'; ?>
-<?php include '../view/sidebar.php'; ?>
+<?php include '../view/navigationbar.php'; ?>
 <main>
     <h1><?php echo htmlspecialchars($category_name); ?></h1>
     <?php if (count($products) == 0) : ?>

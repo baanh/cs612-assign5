@@ -1,4 +1,5 @@
 <?php include 'view/header.php'; ?>
+<?php include 'view/navigationbar.php'; ?>
 
 <main class="nofloat">
     <h1>Delete Account</h1>

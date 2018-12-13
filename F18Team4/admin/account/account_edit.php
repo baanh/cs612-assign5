@@ -1,4 +1,5 @@
 <?php include 'view/header.php'; ?>
+<?php include 'view/navigationbar.php'; ?>
 
 <main>
     <h1>Edit Account</h1>
