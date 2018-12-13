@@ -24,9 +24,9 @@
             $first_paragraph = substr($description_with_tags, 3, $i - 3);
             ?>
 
-            <div class="card">
-                <img class="card-img-top" style="height: 200px; margin: auto" 
-                     src="images/<?php echo htmlspecialchars($product['productCode']); ?>_s.png" alt="Card image cap">
+            <div class="card" >
+                <img class="card-img-top" style="height: 300px; width: auto; margin: auto" 
+                     src="images/<?php echo htmlspecialchars($product['productCode']); ?>_m.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">
                         <p>$<?php echo number_format($unit_price, 2); ?></p>
