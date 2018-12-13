@@ -1,4 +1,5 @@
 <?php include 'view/header.php'; ?>
+<<<<<<< HEAD
 <?php include 'view/sidebar_admin.php'; ?> 
 <?php include 'view/sidebar.php'; ?> 
 
@@ -9,6 +10,14 @@
         guitars, basses, and drums. And we're constantly adding more to give
         you the best selection possible!
     </p>
+=======
+<?php include 'view/navigationbar.php'; ?>
+<?php include 'view/sidebar.php'; ?>
+<main class="nofloat">
+    <h4>Featured products</h4>
+    <p>A great selection of musical instruments including
+        guitars, basses, and drums</p>
+>>>>>>> 34012079771a67b7b4fea35b6eaa76414e92983d
     <div class="card-deck">
         <?php
         foreach ($products as $product) :
@@ -39,8 +48,8 @@
                     </h5>
                     <!-- <p class="card-text"><?php echo $first_paragraph; ?></p> -->
                 </div>
-                <div class="card-footer">
-                    <a href="#" class="btn btn-primary">See Detail</a>
+                <div class="card-footer text-center">
+                    <a href="#">Add to cart</a>
                 </div>
             </div>
         <?php endforeach; ?>

@@ -1,5 +1,6 @@
 <?php include '../../view/header.php'; ?>
 <?php include '../../view/sidebar_admin.php'; ?>
+<script src='../../js/validation.js'></script>
 <main>
     <?php
     if (isset($product_id)) {
@@ -9,7 +10,7 @@
     }
     ?>
     <h1>Product Manager - <?php echo $heading_text; ?></h1>
-    <form action="index.php" method="post" id="add_product_form">
+    <form action="index.php" method="post" id="add_product_form" onsubmit="return validate(this)">
         <?php if (isset($product_id)) : ?>
             <input type="hidden" name="action" value="update_product">
             <input type="hidden" name="product_id"

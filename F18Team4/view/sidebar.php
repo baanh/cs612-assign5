@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
     <ul class="nav">
         <li class="nav-item">
@@ -21,23 +22,48 @@
             </li>
         <?php endforeach; ?>
         
+=======
+<aside>
+    <h5>Links</h5>
+    <ul>
+        <li>
+>>>>>>> 34012079771a67b7b4fea35b6eaa76414e92983d
         <?php
         // Check if user is logged in and
         // display appropriate account links
-        $account_url = $app_path . 'account';
+        $account_url = $app_path . 'admin/account';
         $logout_url = $account_url . '?action=logout';
-        if (isset($_SESSION['user'])) :
-            ?>
-            <li class="nav-item"><a class="nav-link" href="<?php echo $account_url; ?>">My Account</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo $logout_url; ?>">Logout</a>
-            <?php else: ?>
-            <li class="nav-item"><a class="nav-link btn-primary" href="<?php echo $account_url; ?>">Login</a></li>
+        
+        if (isset($_SESSION['admin'])) :
+        ?>
+            <a href="<?php echo $logout_url; ?>">Logout</a>
+        <?php else: ?>
+            <a href="<?php echo $account_url; ?>">Login</a>
         <?php endif; ?>
-            
-        <li class="nav-item">
-            <a class="nav-link" href="<?php echo $app_path . 'cart'; ?>"><img src="<?php echo $app_path . 'images/cart-2x.png'?>">Cart</a>
+        </li>
+        <li>
+            <a href="<?php echo $app_path; ?>">Home</a>
+        </li>
+        <li>
+            <a href="<?php echo $app_path; ?>admin">Admin</a>
         </li>
     </ul>
+    
+    <?php if (isset($categories)) : ?>
+    <!-- display links for all categories -->
+    <h5>Categories</h5>
+    <ul>
+        <?php foreach ($categories as $category) : ?>
+        <li>
+            <a href="<?php echo $app_path .
+                'admin/product?action=list_products' .
+                '&amp;category_id=' . $category['categoryID']; ?>">
+                <?php echo htmlspecialchars($category['categoryName']); ?>
+            </a>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+    <?php endif; ?>
 
     <!-- <h2>Temp Link</h2>
     <ul>
@@ -47,5 +73,9 @@
             <a href="<?php echo $app_path; ?>admin">Admin</a>
         </li>        
     </ul> -->
+<<<<<<< HEAD
 
 </div>
+=======
+</aside>
+>>>>>>> 34012079771a67b7b4fea35b6eaa76414e92983d

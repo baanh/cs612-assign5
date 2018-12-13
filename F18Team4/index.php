@@ -3,7 +3,7 @@ require_once('util/main.php');
 require_once('model/product_db.php');
 
 // Set the featured product IDs in an array
-$product_ids = array(1, 7, 9, 3);
+$product_ids = array(1, 7, 9);
 // Note: You could also store a list of featured products in the database
 
 // Get an array of featured products from the database
