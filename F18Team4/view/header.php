@@ -18,7 +18,7 @@
                     <tr>
                         <th><IMG src="<?php echo $app_path ?>images/logo.png" width="50" ></th>
                         <th><h1>My Guitar Shop</h1></th>
-                    </tr>  
+                    </tr>   
                 </table>
             </center>
 
