@@ -1,4 +1,4 @@
-<div>
+<div align="center">
     <ul class="nav">
         <li class="nav-item">
             <a class="nav-link active" href="<?php echo $app_path; ?>">Home</a>
@@ -11,7 +11,7 @@
         $categories = get_categories();
         foreach ($categories as $category) :
             $name = $category['categoryName'];
-            $id = $category['categoryID'];
+            $id = $category['categoryID'];  
             $url = $app_path . 'catalog?category_id=' . $id;
             ?>
             <li class="nav-item">
@@ -47,4 +47,5 @@
             <a href="<?php echo $app_path; ?>admin">Admin</a>
         </li>        
     </ul> -->
+
 </div>

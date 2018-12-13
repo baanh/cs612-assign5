@@ -1,6 +1,9 @@
 <?php include 'view/header.php'; ?>
-<?php include 'view/sidebar.php'; ?>
+<?php include 'view/sidebar_admin.php'; ?> 
+<?php include 'view/sidebar.php'; ?> 
+
 <main class="nofloat">
+    <body style="background-color:powderblue;">
     <h3>Featured products</h3>
     <p>We have a great selection of musical instruments including
         guitars, basses, and drums. And we're constantly adding more to give
@@ -42,5 +45,6 @@
             </div>
         <?php endforeach; ?>
     </div>
+    </body>
 </main>
 <?php include 'view/footer.php'; ?>
