@@ -11,15 +11,13 @@
         ?>
             <a href="<?php echo $logout_url; ?>">Logout</a>
         <?php else: ?>
-            <a href="<?php echo $account_url; ?>">Login</a>
+            <a href="<?php echo $account_url; ?>">Admin Login</a>
         <?php endif; ?>
         </li>
         <li>
             <a href="<?php echo $app_path; ?>">Home</a>
         </li>
-        <li>
-            <a href="<?php echo $app_path; ?>admin">Admin</a>
-        </li>
+
     </ul>
     
     <?php if (isset($categories)) : ?>
