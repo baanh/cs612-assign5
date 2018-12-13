@@ -1,28 +1,3 @@
-
-<div align="center">
-    <ul class="nav">
-        <li class="nav-item">
-            <a class="nav-link active" href="<?php echo $app_path; ?>">Home</a>
-        </li>
-        
-        <?php
-        require_once('model/database.php');
-        require_once('model/category_db.php');
-
-        $categories = get_categories();
-        foreach ($categories as $category) :
-            $name = $category['categoryName'];
-            $id = $category['categoryID'];  
-            $url = $app_path . 'catalog?category_id=' . $id;
-            ?>
-            <li class="nav-item">
-                <a class="nav-link active" href="<?php echo $url; ?>">
-                    <?php echo htmlspecialchars($name); ?>
-                </a>
-            </li>
-        <?php endforeach; ?>
-        
-
 <aside>
     <h5>Links</h5>
     <ul>
@@ -73,9 +48,5 @@
             <a href="<?php echo $app_path; ?>admin">Admin</a>
         </li>        
     </ul> -->
-
-
-</div>
-
 </aside>
 

@@ -1,4 +1,5 @@
 <?php include '../view/header.php'; ?>
+<?php include '../view/navigationbar.php'; ?>
 <?php include '../view/sidebar.php'; ?>
 <main class="nofloat">
     <!-- display product -->
