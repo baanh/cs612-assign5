@@ -1,5 +1,4 @@
 <?php include '../view/header.php'; ?>
-<?php include '../view/sidebar.php'; ?>
 <?php 
 if (!isset($password_message)) { $password_message = ''; } 
 ?>
@@ -31,10 +30,10 @@ if (!isset($password_message)) { $password_message = ''; }
     }
 </script>
 <main>
-    <h1>Register</h1>
+    <h3 class="text-secondary">Register</h3>
     <form action="." method="post" id="register_form">
 
-        <h2>Customer Information</h2>
+        <h4>Customer Information</h4>
         <input type="hidden" name="action" value="register">
 
         <label>E-Mail:</label>
@@ -63,7 +62,7 @@ if (!isset($password_message)) { $password_message = ''; }
                size="30">
         <?php echo $fields->getField('last_name')->getHTML(); ?><br>
 
-        <h2>Shipping Address</h2>
+        <h4>Shipping Address</h4>
         <label>Address:</label>
         <input type="text" name="ship_line1"
                value="<?php echo htmlspecialchars($ship_line1); ?>"
@@ -100,7 +99,7 @@ if (!isset($password_message)) { $password_message = ''; }
                size="30">
         <?php echo $fields->getField('ship_phone')->getHTML(); ?><br>
 
-        <h2>Billing Address</h2>
+        <h4>Billing Address</h4>
         <label>&nbsp;</label>
         <input type="checkbox" name="use_shipping"
                <?php if ($use_shipping) : ?>checked<?php endif; ?>
@@ -144,7 +143,7 @@ if (!isset($password_message)) { $password_message = ''; }
         <?php echo $fields->getField('bill_phone')->getHTML(); ?><br>
 
         <label>&nbsp;</label>
-        <input type="submit" value="Register">
+        <input type="submit" class="btn btn-warning" value="Register">
     </form>
 </main>
 <?php include '../view/footer.php'; ?>
