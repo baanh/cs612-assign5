@@ -1,10 +1,9 @@
 <?php include 'view/header.php'; ?>
-<?php include 'view/navigationbar.php'; ?>
 
 <main>
-    <h1>Administrator Accounts</h1>
+    <h3 class="text-secondary">Administrator Accounts</h3>
     <?php if (isset($_SESSION['admin'])) : ?>
-    <h2>My Account</h2>
+    <h4 class="text-secondary">My Account</h4>
     <p><?php echo $_SESSION['admin']['firstName'] . ' ' .
             $_SESSION['admin']['lastName'] .
             ' (' . $_SESSION['admin']['emailAddress'] . ')'; ?></p>
@@ -12,11 +11,11 @@
         <input type="hidden" name="action" value="view_edit">
         <input type="hidden" name="admin_id" 
                value="<?php echo $_SESSION['admin']['adminID']; ?>">
-        <input type="submit" value="Edit">
+        <input type="submit" class="btn btn-info" value="Edit">
     </form>
     <?php endif; ?>
     <?php if ( count($admins) > 1 ) : ?>
-        <h2>Other Administrators</h2>
+        <h4 class="text-secondary">Other Administrators</h4>
         <table>
         <?php foreach($admins as $admin):
             if ($admin['adminID'] != $_SESSION['admin']['adminID']) : ?>
@@ -30,14 +29,14 @@
                             value="view_edit">
                         <input type="hidden" name="admin_id"
                             value="<?php echo $admin['adminID']; ?>">
-                        <input type="submit" value="Edit">
+                        <input type="submit" class="btn btn-info" value="Edit">
                     </form>
                     <form action="." method="post" class="inline">
                         <input type="hidden" name="action"
                             value="view_delete_confirm">
                         <input type="hidden" name="admin_id"
                             value="<?php echo $admin['adminID']; ?>">
-                        <input type="submit" value="Delete">
+                        <input type="submit" class="btn btn-danger" value="Delete">
                     </form>
                 </td>
             </tr>
@@ -45,7 +44,7 @@
         <?php endforeach; ?>
         </table>
     <?php endif; ?>
-    <h2>Add an Administrator</h2>
+    <h4 class="text-secondary">Add an Administrator</h4>
     <form action="." method="post" id="add_admin_user_form">
         <input type="hidden" name="action" value="create">
         <label>E-Mail:</label>
@@ -74,7 +73,7 @@
         <?php echo $fields->getField('password_2')->getHTML(); ?><br>
         
         <label>&nbsp;</label>
-        <input type="submit" value="Add Admin User">
+        <input type="submit" class="btn btn-warning" value="Add Admin User">
     </form>
 </main>
 <?php include 'view/footer.php'; ?>

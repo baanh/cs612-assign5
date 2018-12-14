@@ -3,11 +3,13 @@
 
     <!-- the head section -->
     <head>
-        <title>My Awesome Guitar Shop</title>
+        <title>Guitar Shop</title>
         <link rel="stylesheet" type="text/css" 
               href="<?php echo $app_path ?>main.css">
         <link rel="stylesheet" type="text/css" 
               href="<?php echo $app_path ?>bootstrap/css/bootstrap.min.css">
+        <link rel="icon" type="image/png" 
+              href="<?php echo $app_path ?>images/logo.png">
     </head>
 
     <body>
@@ -16,8 +18,8 @@
             <center>
                 <table>
                     <tr>
-                        <th><IMG src="<?php echo $app_path ?>images/logo.png" width="50" ></th>
-                        <th><h1>My Guitar Shop</h1></th>
+                        <th><a href="<?php echo $app_path ?>"><IMG src="<?php echo $app_path ?>images/logo.png" width="50" ></a></th>
+                        <th><h2><a style="color:black;text-decoration:none" href="<?php echo $app_path ?>">Guitar Shop</a></h2></th>
                     </tr>   
                 </table>
             </center>

@@ -1,5 +1,4 @@
 <?php include 'view/header.php'; ?>
-<?php include 'view/sidebar_admin.php'; ?>
 <main>
     <h1>Order Information</h1>
     <p>Order Number: <?php echo $order_id; ?></p>

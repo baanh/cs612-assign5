@@ -6,7 +6,6 @@
         <p>There are no products in your cart.</p>
 
     <?php else: ?>
-        <p>To remove an item from your cart, change its quantity to 0.</p>
         <form action="." method="post">
             <input type="hidden" name="action" value="update">
             <table id="cart" class="table">
@@ -21,7 +20,10 @@
                 <tbody>
                     <?php foreach ($cart as $product_id => $item) : ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($item['name']); ?></td>
+                            <td>
+                                <?php echo htmlspecialchars($item['name']); ?>
+                                <br><a href="?action=remove&product=<?php echo $product_id ?>">Remove</a>
+                            </td>
                             <td class="right">
                                 <?php echo sprintf('$%.2f', $item['unit_price']); ?>
                             </td>
@@ -30,7 +32,7 @@
                                     name="items[<?php echo $product_id; ?>]" 
                                     value="<?php echo $item['quantity']; ?>">
                                         <?php
-                                        for ($i = 0; $i <= 100; $i++) {
+                                        for ($i = 1; $i <= 100; $i++) {
                                             if ($i == $item['quantity']) {
                                                 echo "<option selected='selected'>$i</option>";
                                             } else {

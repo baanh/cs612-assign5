@@ -43,7 +43,11 @@ switch ($action) {
         }
         $cart = cart_get_items();
         break;
-
+    case 'remove':
+        $product_id = filter_input(INPUT_GET, 'product');
+        cart_remove_item($product_id);    
+        $cart = cart_get_items();
+        break;
     default:
         add_error("Unknown cart action: " . $action);
         break;

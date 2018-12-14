@@ -3,7 +3,7 @@
 <?php include 'view/navigationbar.php'; ?>
 <?php include 'view/sidebar_admin.php'; ?> 
 <main class="nofloat">
-    <h4>Featured products</h4>
+    <h3 class="text-secondary">Featured products</h3>
     <p>A great selection of musical instruments including
         guitars, basses, and drums</p>
 
