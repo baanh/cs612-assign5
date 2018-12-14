@@ -1,7 +1,5 @@
 <?php include 'view/header.php'; ?>
-
 <?php include 'view/navigationbar.php'; ?>
-<?php include 'view/sidebar_admin.php'; ?> 
 <main class="nofloat">
     <h3 class="text-secondary">Featured products</h3>
     <p>A great selection of musical instruments including
@@ -31,14 +29,15 @@
                 <div class="card-body">
                     <h5 class="card-title">
                         <p>$<?php echo number_format($unit_price, 2); ?></p>
-                        <a href="catalog?product_id=<?php echo $product['productID']; ?>">
+                        <a style="color:black" href="catalog?product_id=<?php echo $product['productID']; ?>">
                             <?php echo htmlspecialchars($product['productName']); ?>
                         </a>
                     </h5>
                     <!-- <p class="card-text"><?php echo $first_paragraph; ?></p> -->
                 </div>
                 <div class="card-footer text-center">
-                    <a href="#">Add to cart</a>
+                    <a href="<?php echo $app_path . 'cart' ?>?action=add&product_id=<?php echo $product['productID']; ?>&quantity=1" 
+                       class="btn btn-warning btn-block">Add to cart</a>
                 </div>
             </div>
         <?php endforeach; ?>

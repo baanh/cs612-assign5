@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Applications/XAMPP/htdocs/cs612-assign5/F18Team4/cart/cart_view.php</file>
+            <file>file:/Applications/XAMPP/htdocs/cs612-assign5/F18Team4/checkout/checkout_payment.php</file>
+            <file>file:/Applications/XAMPP/htdocs/cs612-assign5/F18Team4/account/account_view_order.php</file>
+            <file>file:/Applications/XAMPP/htdocs/cs612-assign5/F18Team4/checkout/index.php</file>
+            <file>file:/Applications/XAMPP/htdocs/cs612-assign5/F18Team4/checkout/checkout_confirm.php</file>
+            <file>file:/Applications/XAMPP/htdocs/cs612-assign5/F18Team4/account/account_view_order_success.php</file>
+        </group>
     </open-files>
 </project-private>
