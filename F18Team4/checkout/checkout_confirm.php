@@ -17,7 +17,6 @@
                 </td>
                 <td class="right">
                     <?php echo $item['quantity']; ?>
-                    <br><a href="?action=remove&product=<?php echo $product_id ?>">Remove</a>
                 </td>
                 <td class="right">
                     <?php echo sprintf('$%.2f', $item['line_price']); ?>
