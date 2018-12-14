@@ -23,6 +23,8 @@ $unit_price_f = number_format($unit_price, 2);
 $image_filename = $product_code . '_m.png';
 $image_path = $app_path . 'images/' . $image_filename;
 $image_alt = 'Image filename: ' . $image_filename;
+
+if (!isset($product_order_count)) { $product_order_count = 0; }
 ?>
 
 <div class="row">

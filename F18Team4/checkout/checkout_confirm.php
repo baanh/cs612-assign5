@@ -1,7 +1,8 @@
 <?php include '../view/header.php'; ?>
-<main>
-    <h1>Confirm Order</h1>
-    <table id="cart">
+<br>
+<main class="nofloat">
+    <h3 class="text-secondary">Confirm Order</h3>
+    <table id="cart" class="table">
         <tr id="cart_header">
             <th class="left" >Item</th>
             <th class="right">Price</th>
@@ -40,15 +41,17 @@
                 <?php echo sprintf('$%.2f', $shipping_cost); ?>
             </td>
         </tr>
-            <tr>
+        <tr>
             <td colspan="3" class="right"><b>Total</b></td>
             <td class="right">
-                <?php echo sprintf('$%.2f', $total); ?>
+                <b><?php echo sprintf('$%.2f', $total); ?></b>
             </td>
         </tr>
-</table>
-    <p>
-        Proceed to: <a href="<?php echo '?action=payment'; ?>">Payment</a>
-    </p>
+        <tr>
+            <td colspan="4" class="right">
+                <a class="btn btn-success" href="<?php echo '?action=payment'; ?>">Proceed To Payment</a>
+            </td>
+        </tr>
+    </table>
 </main>
 <?php include '../view/footer.php'; ?>

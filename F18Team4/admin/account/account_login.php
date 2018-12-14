@@ -1,22 +1,23 @@
 <?php include 'view/header.php'; ?>
-<?php include 'view/navigationbar.php'; ?>
 
 <main>
-    <h1>Admin Login</h1>
-    <form action="." method="post" id="login_form">
+    <form action="." method="post" id="login_form" style="width:30%;margin:auto">
+        <h3 class="text-secondary">Admin Login</h3>
         <input type="hidden" name="action" value="login">
         
-        <label>E-Mail:</label>
-        <input type="text" name="email"
-               value="<?php echo htmlspecialchars($email); ?>" size="30">
-        <?php echo $fields->getField('email')->getHTML(); ?><br>
+        <div class="form-group">
+            <label for="inputEmail" style="width:100%"><b>Email (Must be a valid one)</b></label>
+            <input type="email" name="email" value="<?php echo htmlspecialchars($email); ?>" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+            <?php echo $fields->getField('email')->getHTML(); ?>
+        </div>
+        
+        <div class="form-group">
+            <label for="inputPassword"><b>Password</b></label>
+            <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
+            <?php echo $fields->getField('password')->getHTML(); ?>
+        </div>
 
-        <label>Password:</label>
-        <input type="password" name="password" size="30">
-        <?php echo $fields->getField('password')->getHTML(); ?><br>
-
-
-        <input type="submit" value="Login">
+        <input type="submit" class="btn btn-warning btn-block" value="Login">
         <?php if (!empty($password_message)) : ?>         
         <span class="error">
             <?php echo htmlspecialchars($password_message); ?>

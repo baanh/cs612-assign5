@@ -28,7 +28,7 @@ $validate = new Validate();
 $fields = $validate->getFields();
 
 // for the Add Account page and other pages
-$fields->addField('email', 'Must be valid email.');
+$fields->addField('email');
 $fields->addField('password_1');
 $fields->addField('password_2');
 $fields->addField('first_name');
