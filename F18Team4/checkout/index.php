@@ -114,7 +114,7 @@ switch ($action) {
                            $item_price, $discount, $quantity);
         }
         clear_cart();
-        redirect('../account?action=view_order&order_id=' . $order_id);
+        redirect('../account?action=view_order_success&order_id=' . $order_id);
         break;
     default:
         display_error('Unknown cart action: ' . $action);

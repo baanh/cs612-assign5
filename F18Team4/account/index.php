@@ -246,6 +246,18 @@ switch ($action) {
         
         include 'account_view_order.php';
         break;
+    case 'view_order_success':
+        $order_id = filter_input(INPUT_GET, 'order_id', FILTER_VALIDATE_INT);
+        $order = get_order($order_id);
+        $order_date = strtotime($order['orderDate']);
+        $order_date = date('M j, Y', $order_date);
+        $order_items = get_order_items($order_id);
+
+        $shipping_address = get_address($order['shipAddressID']);
+        $billing_address = get_address($order['billingAddressID']);
+        
+        include 'account_view_order_success.php';
+        break;
     case 'view_account_edit':
         $email = $_SESSION['user']['emailAddress'];
         $first_name = $_SESSION['user']['firstName'];
