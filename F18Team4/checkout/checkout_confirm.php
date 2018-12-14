@@ -2,6 +2,28 @@
 <br>
 <main class="nofloat">
     <h3 class="text-secondary">Confirm Order</h3>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h3 class="text-secondary">Shipping Address</h3>
+                <p><?php echo htmlspecialchars($shipping_address['line1']); ?><br>
+                    <?php if (strlen($shipping_address['line2']) > 0) : ?>
+                        <?php echo htmlspecialchars($shipping_address['line2']); ?><br>
+                    <?php endif; ?>
+                    <?php
+                    echo htmlspecialchars($shipping_address['city'] . ', ' .
+                            $shipping_address['state'] . ' ' .
+                            $shipping_address['zipCode']);
+                    ?><br>
+                    <?php echo htmlspecialchars($shipping_address['phone']); ?>
+                </p>
+                <form action="../account" method="post">
+                    <input type="hidden" name="action" value="edit_shipping">
+                    <input type="submit" class="btn btn-warning" value="Edit Shipping Address">
+                </form>
+            </div>
+    
     <table id="cart" class="table">
         <tr id="cart_header">
             <th class="left" >Item</th>
@@ -35,28 +57,6 @@
                 <?php echo sprintf('$%.2f', $tax); ?>
             </td>
         </tr>
-        
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h3 class="text-secondary">Shipping Address</h3>
-                <p><?php echo htmlspecialchars($shipping_address['line1']); ?><br>
-                    <?php if (strlen($shipping_address['line2']) > 0) : ?>
-                        <?php echo htmlspecialchars($shipping_address['line2']); ?><br>
-                    <?php endif; ?>
-                    <?php
-                    echo htmlspecialchars($shipping_address['city'] . ', ' .
-                            $shipping_address['state'] . ' ' .
-                            $shipping_address['zipCode']);
-                    ?><br>
-                    <?php echo htmlspecialchars($shipping_address['phone']); ?>
-                </p>
-                <form action="../account" method="post">
-                    <input type="hidden" name="action" value="edit_shipping">
-                    <input type="submit" class="btn btn-warning" value="Edit Shipping Address">
-                </form>
-            </div>
-        
         <tr>
             <td colspan="3" class="right">Shipping</td>
             <td class="right">
