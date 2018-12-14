@@ -1,5 +1,5 @@
 <aside>
-    <h2>Links</h2>
+    <h5>Links</h5>
     <ul>
         <li>
         <?php
@@ -22,7 +22,7 @@
     
     <?php if (isset($categories)) : ?>
     <!-- display links for all categories -->
-    <h2>Categories</h2>
+    <h5>Categories</h5>
     <ul>
         <?php foreach ($categories as $category) : ?>
         <li>
